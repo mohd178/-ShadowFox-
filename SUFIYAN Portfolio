@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohd Sufiyan — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Portfolio of Mohd Sufiyan — projects, skills and contact." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#06b6d4;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071226 0%, #071428 100%);
+      color:#e6eef8;line-height:1.5;-webkit-font-smoothing:antialiased;padding:32px;
+    }
+    .container{max-width:980px;margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:center;padding:26px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;margin-bottom:22px}
+    .intro h2{margin:0 0 10px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted)}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#021024;text-decoration:none;font-weight:700}
+
+    .profile-card{background:var(--card);padding:18px;border-radius:12px;text-align:center}
+    .avatar{width:120px;height:120px;border-radius:18px;margin:0 auto 12px;background:linear-gradient(180deg,#122233,#0a1526);display:flex;align-items:center;justify-content:center;font-size:40px}
+    .muted{color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px}
+    .card h3{margin-top:0}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:12px;border-radius:10px}
+    .project h4{margin:6px 0}
+    .project p{color:var(--muted);margin:0}
+
+    footer{text-align:center;color:var(--muted);margin-top:22px}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* small helper */
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{padding:6px 8px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MS</div>
+        <div>
+          <h1>Mohd Sufiyan</h1>
+          <div class="muted">Computer Science Student • Developer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <h2>Hi — I’m Mohd Sufiyan.</h2>
+        <p>I build clean, accessible web applications and tools. I’m currently studying Computer Science and building projects around full‑stack development, ML and automation.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Hire / Contact</a>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="avatar">MS</div>
+        <h3>Mohd Sufiyan</h3>
+        <div class="muted">B.Tech CSE • Fresher</div>
+        <div style="margin-top:12px" class="chips">
+          <div class="chip">Python</div>
+          <div class="chip">HTML</div>
+          <div class="chip">React</div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="grid">
+      <div class="card" id="about">
+        <h3>About me</h3>
+        <p class="muted">I’m a Computer Science student. I enjoy building small tools, web apps, and experimenting with ML models. I have experience with Python, HTML/CSS, and basic JS. Open to internships and freelancing.</p>
+      </div>
+      <div class="card" id="contact">
+        <h3>Contact</h3>
+        <p class="muted">Email: <a href="mailto:msuf36786@gmail.com.com">msuf36786@gmail.com</a></p>
+        <p class="muted">Phone: +91 9908122198</p>
+        <p class="muted">Location: India</p>
+      </div>
+    </div>
+
+    <section class="card" id="projects" style="margin-bottom:12px">
+      <h3>Selected projects</h3>
+      <div class="projects">
+        <div class="project">
+          <strong>Project A — Smart Complaint Routing</strong>
+          <h4>Smart complaint routing and tracking system</h4>
+          <p class="muted">A capstone project using NLP to classify complaints and route them automatically. Built with Python and Flask.</p>
+          <p style="margin-top:8px"><a href="#">View code / demo</a></p>
+        </div>
+        <div class="project">
+          <strong>Project B — Portfolio Website</strong>
+          <h4>Personal portfolio website</h4>
+          <p class="muted">This portfolio template. Static HTML/CSS, ready to host on Netlify / GitHub Pages.</p>
+          <p style="margin-top:8px"><a href="#">View code / demo</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="skills">
+      <h3>Skills</h3>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <div class="chip">Python</div>
+        <div class="chip">HTML & CSS</div>
+        <div class="chip">JavaScript</div>
+        <div class="chip">React</div>
+        <div class="chip">Machine Learning</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Want this site deployed under your domain? Replace the demo text, update contacts, and deploy to GitHub Pages, Netlify, or Vercel.</p>
+      <p style="margin-top:8px">© <span id="year"></span> Mohd Sufiyan</p>
+    </footer>
+  </div>
+
+  <script>
+    // small JS helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body><!-- Added Social Links -->
+<div class="mt-6 flex space-x-6 p-4">
+<a href="https://www.linkedin.com/in/Mohd Sufiyan" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold">LinkedIn</a>
+<a href="https://github.com/mohd178" target="_blank" class="text-gray-800 hover:text-black font-semibold">GitHub</a>
+</div>
+</body>
+</html>
+</html>
